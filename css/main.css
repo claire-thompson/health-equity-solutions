@@ -87,6 +87,346 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+   /************************* Universal Styles *************************/
+
+   body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+
+   p {
+     margin: 0;
+   }
+
+   a {
+    text-decoration: none;
+    color: #000;
+   }
+
+   nav {
+    padding: 20px 0;
+   }
+
+   nav ul {
+     list-style-type: none;
+     padding: 0;
+     margin: 0;
+   }
+
+   nav a {
+     text-transform: uppercase;
+     color: #9092e1;
+     font-weight: bold;
+   }
+
+   nav ul li {
+    margin: 8px 0;
+    font-size: 1.25em;
+   }
+
+   .logo svg {
+    width: 100px;
+  }
+
+  .cls-1 {
+   fill: none;
+ }
+
+ .cls-2 {
+   clip-path: url(#clip-path);
+ }
+
+ .logo-letters {
+   fill: #fff;
+ }
+
+ .logo-bars {
+   fill: #fff;
+ }
+
+ main {
+   width: 100%;
+ }
+
+ .corner-border {
+  display: grid;
+  grid-template: 32px auto 32px / 32px auto 32px;
+  width: 100%;
+ }
+
+ .tagline .horizontal-bar, 
+ .tagline .vertical-bar, 
+ .prime .horizontal-bar, 
+ .prime .vertical-bar {
+  background-color: #ffb74d;
+}
+
+.tagline .corner,
+.prime .corner {
+  background-color: #ffcc80;
+}
+
+.tagline .content-wrapper,
+.prime .content-wrapper {
+  background-color: #ff9800;
+}
+
+   /************************* Mobile Styles *************************/
+
+   /***** Header *****/
+
+   header {
+     background-color: #333c8b;
+     width: 100%;
+   }
+
+   header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   }
+
+  /***** Hero Area *****/
+
+  .hero-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/stock-walker.jpg) center no-repeat;
+    background-size: cover;
+    height: 400px;
+  }
+
+  .hero-area .logo-letters, .hero-area .logo-bars {
+    fill: #ff9800;
+  }
+
+  .ct-map {
+    position: absolute;
+    opacity: .7;
+    width: 70%;
+    margin: 10px 0;
+  }
+
+  .logo {
+    position: relative;
+  }
+
+  /***** About *****/
+
+  .tagline {
+    color: #252c66;
+  }
+
+  h2 {
+    margin: 20px;
+  }
+
+  .tagline .horizontal-bar, .tagline .vertical-bar {
+    background-color: #ffb74d;
+  }
+
+  .tagline .corner {
+    background-color: #ffcc80;
+  }
+
+  .tagline .content-wrapper {
+    background-color: #ff9800;
+  }
+
+  article {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15rem;
+  }
+
+  .disparity {
+    background-image: url(../img/stock-yoga.jpg);
+  }
+
+  .data {
+    background-image: url(../img/holding_hands.png);
+  }
+
+  .community {
+    background-image: url(../img/stock-abacus.jpg);
+    background-position: top;
+  }
+
+  .disparity .content-wrapper, 
+  .data .content-wrapper, 
+  .community .content-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: left;
+  }
+
+  .homepage-quote {
+    height: 100%;
+    width: 85%;
+    color: #fff;
+    margin: 24px 0;
+  }
+
+  .data p {
+    color: #000;
+  }
+
+  .disparity .content-wrapper {
+    background-color: rgba(80, 83, 111, 0.65);
+  }
+
+  .data .content-wrapper {
+    background-color: rgba(204, 219, 124, 0.65);
+  }
+
+  .community .content-wrapper {
+    background-color: rgba(230, 137, 0, 0.65);
+  }
+
+  /***** Prime Section *****/
+
+  .prime .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .prime p {
+    width: 90%;
+    margin: 20px 0;
+  }
+
+  .prime img {
+    width: 85%;
+    margin: 0 0 20px 0;
+  }
+
+  /***** Bottom Nav *****/
+
+  .bottom-nav {
+    background-color: #333c8b;
+  }
+
+  /***** Footer *****/
+
+  footer .horizontal-bar, 
+  footer .vertical-bar{
+   background-color: #bad532;
+ }
+ 
+ footer .corner {
+   background-color: #e3fc5b;
+ }
+ 
+ footer .content-wrapper {
+   background-color: #fff;
+   margin: 20px 5px;
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+ }
+
+ footer .logo, 
+ #contact,
+ .address {
+   margin: 0 0 20px 0;
+ }
+
+ footer .logo svg {
+  width: 130px;
+ }
+
+  footer .logo-letters, footer .logo-bars {
+    fill: #ff9800;
+  }
+
+  footer a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .icon-box .horizontal-bar,
+  .icon-box .vertical-bar {
+    background-color: #ff9800;
+  }
+
+  .icon-box .corner {
+    background-color: #e68900;
+  }
+
+  .icon-box {
+    display: grid;
+    grid-template: 8px auto 8px / 8px auto 8px;
+    width: 55px;
+  }
+
+  .icon-box .content-wrapper {
+    height: 40px;
+    margin: 0;
+    background-color: #ffb74d;
+    display: flex;
+    justify-content: center;
+  }
+
+  .icon-box i {
+    color: #fff;
+    font-size: 1.5em;
+  }
+
+  #contact, .address {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    align-self: center;
+  }
+
+  .contact-info {
+    margin: 5px 0;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .contact-items {
+    width: 65%;
+  }
+
+  .contact-info i {
+    margin: 0 20px 0 0;
+  }
+
+  .address-content a {
+    line-height: 1.7em;
+  }
+
+  footer img {
+    width: 80%;
+    margin: 10px 0 0 0;
+  }
+
+  .twitter,
+  .grant,
+  #google_translate_element {
+    margin: 0 0 20px 0;
+  }
+
+  .attribution {
+    width: 90%;
+    align-self: center;
+    font-size: 0.75em;
+  }
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */
