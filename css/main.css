@@ -125,12 +125,16 @@ textarea {
    }
 
    nav ul li {
+    text-transform: uppercase;
+    color: #9092e1;
+    font-weight: bold;
     margin: 8px 0;
     font-size: 1.25em;
+    text-align: center;
    }
 
    .logo svg {
-    width: 100px;
+    width: 60px;
   }
 
   .cls-1 {
@@ -183,6 +187,18 @@ textarea {
    header {
      background-color: #333c8b;
      width: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    flex-direction: column;
+   }
+
+   header .content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100px;
    }
 
    header nav {
@@ -191,6 +207,48 @@ textarea {
     align-items: center;
     justify-content: center;
    }
+
+   #menu-button {
+    font-size: 2em;
+    color: #9092e1;
+   }
+
+   .hidden {
+    height: 0px;
+    transition: all 0.3s ease-out;
+  }
+
+  .visible {
+    transition: all 0.3s ease-out;
+  }
+
+  #top-nav {
+    padding: 0 0 20px 0;
+  }
+
+  #top-nav i {
+    color: #9092e1;
+    font-size: 1.25em;
+    margin: 0 0 0 10px;
+  }
+
+  #top-nav .visible {
+    height: 300px;
+  }
+
+  #nav-items .visible {
+    height: 300px; 
+  }
+
+  #about-nav {
+    padding: 20px 0;
+    background-color: #252c66;
+    width: 100%;
+  }
+
+  nav ul li a:hover {
+    border-bottom: 1px solid;
+  }
 
   /***** Hero Area *****/
 
@@ -201,6 +259,10 @@ textarea {
     background: url(../img/stock-walker.jpg) center no-repeat;
     background-size: cover;
     height: 400px;
+  }
+
+  .hero-area .logo svg {
+    width: 100px;
   }
 
   .hero-area .logo-letters, .hero-area .logo-bars {
@@ -238,6 +300,9 @@ textarea {
 
   .tagline .content-wrapper {
     background-color: #ff9800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   article {
@@ -274,6 +339,7 @@ textarea {
     width: 85%;
     color: #fff;
     margin: 24px 0;
+    height: 50px;
   }
 
   .data p {
@@ -385,8 +451,7 @@ textarea {
   #contact, .address {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 90%;
+    width: 271px;
     align-self: center;
   }
 
@@ -399,7 +464,7 @@ textarea {
   }
 
   .contact-items {
-    width: 65%;
+    margin: 0 0 0 20px;
   }
 
   .contact-info i {
@@ -408,6 +473,7 @@ textarea {
 
   .address-content a {
     line-height: 1.7em;
+    margin: 0 0 0 10px;
   }
 
   footer img {
@@ -416,8 +482,7 @@ textarea {
   }
 
   .twitter,
-  .grant,
-  #google_translate_element {
+  .grant {
     margin: 0 0 20px 0;
   }
 
@@ -515,8 +580,157 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-  /* Style adjustments for viewports that meet the condition */
+/*** Tablet Styles ***/
+
+@media only screen and (min-width: 700px) {
+
+  /* Hero Area */
+
+.hero-area {
+  height: 800px;
+}
+
+.hero-area .logo svg {
+  width: 200px;
+}
+
+/* About */
+
+.about {
+  display: flex;
+}
+
+.about article {
+  width: 33.33%;
+  height: 450px;
+  display: flex;
+}
+
+.about .content-wrapper {
+  height: 50%;
+  align-self: flex-end;
+}
+
+.data .content-wrapper {
+  align-self: flex-start;
+}
+
+/* Footer */
+
+footer .content-wrapper {
+  margin: 20px;
+  display: grid;
+  grid-template: repeat(4, auto) / 50% 50%;
+  grid-template-areas:  "logo twitter"
+                        "contact twitter"
+                        "address grant"
+                        "attribution attribution";
+}
+
+footer .logo {
+  grid-area: logo;
+  align-self: center;
+}
+
+#contact {
+  grid-area: contact;
+}
+
+.address {
+  grid-area: address;
+}
+
+.twitter {
+  grid-area: twitter;
+  margin: 20px 0;
+}
+
+.grant {
+  grid-area: grant;
+  margin: 0 0 30px 0;
+}
+
+.attribution {
+  grid-area: attribution;
+  justify-self: center;
+}
+
+footer .logo, #contact, .address {
+  margin: 0;
+}
+
+#contact, .address {
+  justify-self: center;
+  align-self: start;
+}
+}
+
+/*** Desktop Styles ***/
+
+@media only screen and (min-width: 1024px) {
+
+  header, .bottom-nav {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  header .content-wrapper {
+    width: 6%;
+  }
+
+#menu-button {
+  display: none;
+}
+
+#top-nav .hidden {
+  margin: 20px 0 0 0;
+  padding: 0 0 20px 0;
+}
+
+#top-nav, nav {
+  display: flex !important;
+  width: 70%;
+}
+
+#nav-items, nav ul {
+  display: flex !important;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+nav ul li {
+  font-size: 1em;
+  margin: 0;
+}
+
+#top-nav .visible {
+  height: unset;
+  align-items: center;
+  margin: 20px 0 0 0;
+  transition: none;
+}
+
+#about-items .visible {
+  display: flex !important;
+}
+
+.bottom-nav nav {
+  width: 100%;
+}
+
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .hero-area {
+    height: 900px;
+  }
+
+  .hero-area .logo svg {
+    width: 300px;
+}
 }
 
 @media print,
